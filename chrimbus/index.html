@@ -1,34 +1,52 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chrimbus "information" page</title>
-  <link rel="stylesheet" href="chrimbus.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrimbus: The Celebration of Chaos</title>
+    <link rel="stylesheet" href="chrimbus.css">
 </head>
-
-<header>
-  <h1>Chrimbus 2019</h1>
-  <nav>
-    <ul id="navul">
-    <li><a href="index.html" class="nav">About</a></li>
-    <li><a href="directions.html" class="nav">When and Where!</a></li>
-    <li><a href="pastfun.html" class="nav">Past Chrimbus Fun!</a></li>
-    </ul>
-  </nav>
-  <img src="images/banner2019.jpg" title="Chrimbus 2019 banner" alt="Chrimbus... Endgame" id="banner" width=100% height=auto>
-</header>
-
 <body>
-  <p>Come visit Chriumbus 2019. It is a great gathering. Watch the video to "learn more".</p>
+    <div class="snow"></div>
+    
+    <header>
+        <h1>🎄 Welcome to the Insanity of Chrimbus 🎄</h1>
+        <p>The holiday celebration that breaks reality.</p>
+        <audio id="audio" src="jingle_bells.mp3" autoplay loop></audio>
+    </header>
 
-<div>
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/z43kpdIY11U?list=LLNxhc0EAGjmis4Qnt7M8JGA?wmode=transparent" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video2019"></iframe>
-</div>
+    <div class="banner">
+        <img src="images\banner2019.jpg" alt="Chrimbus Banner">
+    </div>
+
+    <section class="video-section">
+        <h2>Why Chrimbus? Who Knows!</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/9I1PY5NfXxg" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/watch?v=z43kpdIY11U" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/watch?v=U23LnKCqOsM" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Strange Chrimbus Memories</h2>
+        <div class="gallery-container">
+            <img src="images\fire2017.jpg" alt="The Great Fire">
+            <img src="images\noface2017.jpg" alt="Faceless Man">
+            <img src="images\winddown2017.jpg" alt="Post-Chrimbus Chill">
+        </div>
+    </section>
+
+    <section class="lore">
+        <h2>Unsolved Mysteries of Chrimbus</h2>
+        <p>The <span class="highlight">Socklord</span> brings gifts of confusion to all!</p>
+        <p>Beware the <span class="highlight">Mistletoad</span> and their chaotic dance...</p>
+    </section>
+
+    <footer>
+        <p>Happy Chrimbus! Or maybe not...</p>
+    </footer>
+
+    <script src="chrimbus.js"></script>
 </body>
-
-<footer id="footer">
-  Brought to you by Cinco Industries.
-</footer>
 </html>

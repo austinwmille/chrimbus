@@ -1,77 +1,154 @@
-html {
-  background-color: #333;  
-}
-
-header {
-  background-color: #333;
-  color: white;
-}
-
+/* Wild Background and Text Animations */
 body {
-  background-color: white;
-  color: black;
-  border: 2px;
-  border-color: red;
-  border-radius: rounded corners;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    background-size: 400% 400%;
+    color: #fff;
+    animation: backgroundShift 3s infinite alternate;
 }
 
-p {
-  text-align: center;
-  padding-left: 10px;
+@keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Glitchy Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { color: white; }
+    20% { color: #ff66c4; transform: translate(-3px, 0); }
+    40% { color: yellow; transform: translate(3px, 0); }
+    60% { color: #00ff96; transform: translate(-3px, 0); }
+    80% { color: white; transform: translate(3px, 0); }
+    100% { color: white; transform: translate(0, 0); }
 }
 
 h1 {
-  text-align: center;
+    font-size: 3em;
+    text-shadow: 0 0 10px #000, 0 0 20px #fff;
 }
 
-#navul {
-  list-style-type: none;
-  margin: 0px;
-  padding-top: 0px;
-  overflow: hidden;
-  background-color: rgb(226, 219, 219);
+/* Snow Animation */
+.snow {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('snowflake.png') repeat;
+    animation: snowfall 3s linear infinite;
 }
 
-nav li a {
-  float: left;
-  display: block;
-  color: #333;
-  text-align: center;
-  padding: 14px 60px;
-  text-decoration: none;
+@keyframes snowfall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
 }
 
-#navul a:hover {
-  color: black;
-  font-size: large;
-  text-emphasis: bold;
-    transition: 3s;
+/* Video Section with Glowing Border */
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 5px solid #ff00ff;
+    box-shadow: 0 0 10px #ff66c4, 0 0 20px #ff66c4;
 }
 
-#banner {
-  margin-top: 10px;
-  margin-bottom: 10px;
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 20px 0;
+    background: #222;
+    animation: colorShift 2s infinite alternate;
 }
 
+@keyframes colorShift {
+    0% { background-color: #222; }
+    100% { background-color: #444; }
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 200px;
+    height: 200px;
+    transform: rotate(15deg);
+    border: 2px solid #fff;
+    animation: shake 0.2s infinite alternate;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(10deg);
+        filter: hue-rotate(20deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+        filter: hue-rotate(-20deg);
+    }
+}
+
+/* Lore Section */
+.lore {
+    background: rgba(255, 0, 72, 0.8);
+    color: yellow;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.highlight {
+    color: #ffdf00;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Footer */
 footer {
-  background-color: rgb(226, 219, 219);
-  padding: 10px;
-  text-align: center;
-  color: #333;
-  float: inline-start;
-  bottom: 0;
-  width: 100%;
-  margin-top: 10px;
+    text-align: center;
+    background: #333;
+    padding: 20px;
+    color: white;
+    font-size: 1.5em;
+    animation: wiggle 2s ease-in-out infinite;
 }
 
-iframe {
-  position: relative;
-  align: middle;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  padding-bottom: 100px;
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
 }
 
-div {
-  text-align: center;
+/* Banner Styling */
+.banner {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    animation: bannerZoom 10s infinite alternate ease-in-out;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    filter: contrast(1.2) brightness(0.9);
+    animation: shake 1s infinite alternate;
+}
+
+@keyframes bannerZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Minor shake animation for added effect */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
 }
