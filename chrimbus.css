@@ -157,10 +157,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 10px; /* Adjust as needed */
 }
 
 .ad-container {
-    margin-left: 20px; /* Adjust spacing as needed */
+    margin-left: 10px; /* Adjust spacing as needed */
+    margin-bottom: 20px;
+    padding: 10px; /* Adds some space inside the border */
+    border: 5px solid #ff66c4; /* Same pink border color */
+    border-radius: 10px; /* Matches the button's rounded corners */
+    box-shadow: 0 0 10px #ff66c4, 0 0 20px #ff66c4; /* Glowing effect */
+    background: #ffff00; /* Matches button background */
 }
 
 #playAll {
